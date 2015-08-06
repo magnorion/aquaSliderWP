@@ -1,0 +1,146 @@
+#aqua-slider-box-param{
+	width: 45%;
+	min-width: 300px;
+	max-width: 340px;
+	overflow: auto;
+	height: 700px;
+	position: absolute;
+	left: 0%;
+	background-color: #FFF;
+	padding: 20px;
+}
+
+#aqua-slider-config div,#aqua-slider-box-image div{
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: auto;
+}
+
+.aqua-slider-img-use{
+	border-bottom: solid black 1px;
+}
+
+#aqua-slider-config div label, #aqua-slider-box-image .aqua-select-image div label{
+	text-transform: capitalize;
+	margin-top: 10px;
+	position: absolute;
+	font-weight: bold;
+}
+
+.aqua-slider-img-use div select{
+	float: right;
+	margin-right: 58.5%;
+}
+
+.aqua-input-config{
+	float: right;
+	width: 65% !important;
+}
+
+#aqua-slider-config p{
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 20px;
+}
+
+#aqua-slider-box-image{
+	position: absolute;
+	right:0%;
+	width: 50%;
+	max-width: 580px;
+	height: auto;
+	overflow: hidden;
+	margin-right: 10px;
+	background-color: #FFF;
+	padding: 20px;
+}
+
+.aqua-select-image{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.aqua-slider-btn-config{
+	background: rgb(17, 100, 147) none repeat scroll 0% 0%;
+	border: medium none;
+	padding: 5px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	box-shadow: 0px 0px 3px 0px rgb(0, 0, 0);
+}
+
+.aqua-slider-new-image{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.aqua-slider-image-displayer img{
+	float: right;
+	width: 400px;
+	height: 200px;
+}
+
+.aqua-slider-img-use{
+	margin-bottom: 20px;
+}
+
+#aqua-slider-btn-end{
+	position: absolute;
+	right: 0%;
+	height: auto;
+}
+
+#aqua-slider-send-data{
+	width: 140px;
+	margin-top: 20px;
+}
+
+.aqua-slider-box-info{
+	position: absolute;
+	right: 1%;
+	top: 1%;
+	width: 200px;
+	height: auto;
+	padding: 10px;
+	background-color:#fff;
+	border-left: #116493 solid 3px;
+	text-transform: capitalize;
+	opacity: 0;
+	display: none;
+	box-shadow: 1px 1px 2px 0px rgb(0, 0, 0);
+}
+
+#aqua-slider-box-code{
+	width: 45%;
+	min-width: 300px;
+	max-width: 340px;
+	overflow: hidden !important;
+	height: auto !important;
+	position: absolute;
+	left: 0%;
+	background-color: #FFF;
+	padding: 20px;
+	height: 70px !important;
+}
+
+#aqua-slider-box-code label{
+	position: relative;
+	margin-top: 0px !important;
+}
+
+#aqua-slider-box-code code{
+	position: absolute;
+	margin: 0px;
+	top: 54%;
+	width: 100%;
+	display: block;
+	color: #fff;
+	background: #000;
+	font-weight: bold;
+	padding: 10px;
+	width: 80%;
+}
