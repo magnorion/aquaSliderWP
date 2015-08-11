@@ -13,7 +13,6 @@
 			"height" => $array_params['height'],
 			"bullet" => $array_params['bullet'],
 			"animation" => $array_params['animation'],
-			"player" => $array_params['player'],
 			"autoPlay" => $array_params['autoPlay'],
 			"control" => $array_params['control']
 		);

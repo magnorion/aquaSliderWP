@@ -12,7 +12,6 @@
 		$height = mysql_real_escape_string($all_params['height']);
 		$bullet = mysql_real_escape_string($all_params['bullet']);
 		$animation = mysql_real_escape_string($all_params['animation']);
-		$player = mysql_real_escape_string($all_params['player']);
 		$control = mysql_real_escape_string($all_params['control']);
 		$autoPlay = mysql_real_escape_string($all_params['autoPlay']);
 
@@ -20,8 +19,8 @@
 		$query_row = mysql_query($search_row) or die("Error: ".mysql_error());
 		$counter_rows = mysql_num_rows($query_row);
 		if($counter_rows < 1){ // If row does not exists
-			$sql_params_to_send = "'$width','$height','$bullet','$animation','$player','$control','$autoPlay'";	
-			$sql_position = "width,height,bullet,animation,player,control,autoPlay";
+			$sql_params_to_send = "'$width','$height','$bullet','$animation','$control','$autoPlay'";	
+			$sql_position = "width,height,bullet,animation,control,autoPlay";
 			$sql_insertion = mysql_query("INSERT INTO $table_name (".$sql_position.") VALUES (".$sql_params_to_send.")")or die("ERROR: ".mysql_error());
 			if($sql_insertion){
 				$msg = "Parametros inseridos";
@@ -29,7 +28,7 @@
 				$msg = "Erro no insert parametros";
 			}
 		}else{ // If row exists
-			$update_params = "width = '$width',height = '$height', bullet = '$bullet', animation = '$animation', player = '$player', control = '$control', autoPlay = '$autoPlay'";
+			$update_params = "width = '$width',height = '$height', bullet = '$bullet', animation = '$animation', control = '$control', autoPlay = '$autoPlay'";
 			$sql_update = mysql_query("UPDATE $table_name SET ".$update_params."  WHERE id = 1 LIMIT 1") or die("ERROR: ".mysql_error());
 			if($sql_update){
 				$msg = "Parametros atualizados!";

@@ -71,7 +71,6 @@
 			}
 		}).success(function(data){
 			var json = JSON.parse(data);
-			console.log(json);
 			if(json.msg){
 				return false;
 			}else{
@@ -80,7 +79,6 @@
 				container.find("input[name='height']").val(json.height);
 				container.find("select[name='bullet']").val(json.bullet);
 				container.find("input[name='animation']").val(json.animation);
-				container.find("select[name='player']").val(json.player);
 				container.find("select[name='control']").val(json.control);
 				container.find("select[name='autoPlay']").val(json.autoPlay);
 			}

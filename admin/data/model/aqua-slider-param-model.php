@@ -13,7 +13,6 @@
 				height varchar(10) NOT NULL,
 				bullet varchar(20),
 				animation varchar(10),
-				player varchar(5),
 				control varchar(5),
 				autoPlay varchar(5),
 				PRIMARY KEY (id)
