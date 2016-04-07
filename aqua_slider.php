@@ -12,10 +12,10 @@
 	class aqua_slider {
 		public function __construct(){
 			if ( is_admin() ){
-				add_action( 'admin_init', array( $this, 'admin_assets' ) ); // Aqua slider admin assets
+				add_action( 'admin_enqueue_scripts', array( $this, 'admin_assets' ) ); // Aqua slider admin assets
 				add_action('admin_menu', array($this,"aqua_slider_load")); // Aqua Slider option ---
 			}
-			
+
 
 			// Media assets
 			add_action('admin_print_scripts', array($this,'wp_gear_manager_admin_scripts'));
@@ -38,7 +38,7 @@
 
 			//Font Awesome
 			wp_enqueue_style("aqua-slider-admin-fontAwesome",plugins_url("admin/assets/font-awesome/css/font-awesome.min.css", __FILE__ ));
-		
+
 			//Admin folder ---
 			wp_enqueue_style("aqua-slider-admin-style",plugins_url("admin/css/style.css", __FILE__ ));
 			wp_enqueue_script("aqua-slider-admin-script",plugins_url("admin/js/script.js", __FILE__ ));
@@ -63,10 +63,10 @@
 	//Images ---
 	function save_all_images(){
 		include_once("admin/data/save-all-images.php");
-	}	
+	}
 	function get_all_images(){
 		include_once("admin/data/get-all-images.php");
-	}	
+	}
 	function remove_image(){
 		include_once("admin/data/remove-image.php");
 	}
@@ -86,7 +86,7 @@
 		wp_enqueue_style("aqua-slider-style",plugins_url("css/aqua-style.css", __FILE__ ));
 		wp_enqueue_script("aqua-slider-srcipt",plugins_url("js/aqua-script.min.js", __FILE__ ));
 	}
-	
+
 	// Salva/Atualiza todas as imagens
 	add_action( 'wp_ajax_save_all_images', 'save_all_images' );
 	add_action( 'wp_ajax_nopriv_save_all_images', 'save_all_images' );
