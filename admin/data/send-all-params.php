@@ -1,7 +1,7 @@
 <?php
 	if(isset($_POST['action'])){
 		include_once("model/aqua-slider-param-model.php");
-		
+
 		$params = $_POST['params'];
 		$width = mysqli_real_escape_string($con,$params['width']);
 		$height = mysqli_real_escape_string($con,$params['height']);
@@ -15,7 +15,8 @@
 		$counter_search = mysqli_num_rows($search_params);
 		if($counter_search < 1){
 			// Primeira vez!
-			$params_values = " '$width' , '$height' , '$bullet' , '$animation' , '$control' , '$autoPlay' , '$type'";
+			$params_values = " '$width' , '$height' , '$bullet' , '$type', '$animation' , '$control' , '$autoPlay'";
+
 			$params_place = "INSERT INTO $table_name (width , height , bullet , type , animation,  control , autoPlay)";
 
 			$params_query_insert = mysqli_query($con,$params_place." VALUES (".$params_values.") ") or die(mysqli_error($con));

@@ -23,8 +23,8 @@
 		}
 
 		public function aqua_slider_load(){
-			$icon = plugins_url("aqua_slider/admin/css/imgs/aqua-slider-ico.png");
-			add_menu_page('Aqua Slider', 'Aqua Slider', 10, 'aqua_slider/admin/index.php','',$icon);
+			$icon = plugins_url("aquaSliderWP/admin/css/imgs/aqua-slider-ico.png");
+			add_menu_page('Aqua Slider', 'Aqua Slider', 10, 'aquaSliderWP/admin/index.php','',$icon);
 		}
 
 		public function admin_assets(){
