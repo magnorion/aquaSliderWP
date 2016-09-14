@@ -9,7 +9,7 @@
 	*/
 
 	defined( 'ABSPATH' ) or die ( 'Plugin file cannot be accessed directly!' );
-	class aqua_slider {
+	class AquaSlider {
 		public function __construct(){
 			if ( is_admin() ){
 				add_action( 'admin_enqueue_scripts', array( $this, 'admin_assets' ) ); // Aqua slider admin assets
@@ -58,7 +58,7 @@
 		}
 	}
 
-	$aqua_slider = new aqua_slider;
+	$aqua_slider = new AquaSlider;
 
 	//Images ---
 	function save_all_images(){

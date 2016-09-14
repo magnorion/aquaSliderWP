@@ -5,7 +5,7 @@
 </style>
 <div id="aqua-admin-body">
 	<div id="aqua-admin-title">
-		<h2> Configurações do Slider </h2>
+		<h2> Configuração do Slider </h2>
 		<div id="aqua-admin-alert"> <p> <i class="fa fa-cube"></i> <span></span> </p></div>
 		<div id="aqua-admin-newImage">
 			<button id="aqua-admin-btn-new-img"> <i class="fa fa-plus"></i> Nova imagem </button>
@@ -23,7 +23,7 @@
 					<label> Largura: </label>
 					<input type="text" name="aqua-slider-width" />
 					<p> Largura do slider. (Fixo ou %)  </p>
-				</div>					
+				</div>
 				<div>
 					<label> Altura: </label>
 					<input type="text" name="aqua-slider-height" />
@@ -40,7 +40,7 @@
 				<div>
 					<label> Animação: </label>
 					<input type="text" name="aqua-slider-animation" />
-					<p> Tempo para transição quando o slider estiver automático. </p> 
+					<p> Tempo para transição quando o slider estiver automático. </p>
 				</div>
 				<div>
 					<label> Controle: </label>
@@ -57,7 +57,7 @@
 						<option value="off"> Desligado </option>
 					</select>
 					<p> Ativar ou desaviar o auto player. </p>
-				</div>					
+				</div>
 				<div>
 					<label> Efeito: </label>
 					<select name="aqua-slider-effect">
@@ -83,7 +83,7 @@
 		<div>
 			<label>Url:</label>
 			<input type="text" name="aqua-img-url" id="img-url" readonly />
-		</div>			
+		</div>
 		<div>
 			<label>Link:</label>
 			<input type="text" name="aqua-img-link" placeholder="http://" />
