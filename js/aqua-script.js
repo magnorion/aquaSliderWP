@@ -70,14 +70,34 @@
 			aqua_self.find("a").each(function(){
 				var self = $(this);
 				var href = self.attr("href");
-				var image_replace = self.children("img").attr("aqua-slider-link",href).css({"cursor":"pointer"}).on("click",function(){
-					var image_url = $(this).attr("aqua-slider-link");
-					window.location.assign(image_url);
-				});
+				var image_replace = self.children("img").attr("aqua-slider-link",href).css({"cursor":"pointer"});
 				self.before(image_replace);
 				self.remove();
 			});
 
+
+			function linkImage(link) {
+				window.location.assign(link);
+			}
+			function applyLink(){
+				var image = $(".aqua-slider-image-show");
+				if (typeof image.attr("aqua-slider-link") != "undefined") {
+					var link = image.attr("aqua-slider-link");
+					$(".aqua-slider-slicer").each(function () {
+						var self = $(this);
+						self.css({ "cursor": "pointer" });
+						self.on("click", function () {
+							linkImage(link);
+						});
+					});
+				} else {
+					$(".aqua-slider-slicer").each(function () {
+						var self = $(this);
+						self.css({ "cursor": "normal" });
+						self.unbind("click");
+					});
+				}
+			}
 
 			// Build the slider controler ---
 			if(options.c == "on"){
@@ -245,7 +265,6 @@
 					}else{
 						slicer_timer += 100;
 					}
-					console.log(slicer_timer);
 					$(current.image).removeClass("aqua-slider-image-show").addClass("aqua-slider-image-hide").css({opacity:0});
 					$(next.image).addClass("aqua-slider-image-show").removeClass("aqua-slider-image-hide").css({"opacity":1});
 					self.animate(objectAnimateNext,slicer_timer,function(){
@@ -254,6 +273,7 @@
 							aqua_slider_current_tick();
 							$(".aqua-right-control").bind("click",aqua_slider_click_next);
 							aqua_slider_current_image();
+							applyLink();
 							aqua_slider_alt();
 							return true;
 						}else{
@@ -301,6 +321,7 @@
 					}
 					$(current.image).removeClass("aqua-slider-image-show").addClass("aqua-slider-image-hide").css({opacity:0});
 					$(next.image).addClass("aqua-slider-image-show").removeClass("aqua-slider-image-hide").css({"opacity":1});
+					applyLink();
 					self.animate( objectAnimatePrev ,slicer_timer,function(){
 						self.css({opacity:0,marginLeft:0,top:0});
 						if(self.attr("aqua-slider-data-slicer") == 2 ){
@@ -337,6 +358,7 @@
 					$(".aqua-right-control").bind("click",aqua_slider_click_next);
 				});
 				$(aqua_image_clicked).addClass("aqua-slider-image-show").removeClass("aqua-slider-image-hide").animate({"opacity":1},600);
+				applyLink();
 				setTimeout(function(){
 					aqua_slider_current_image();
 					aqua_slider_alt();

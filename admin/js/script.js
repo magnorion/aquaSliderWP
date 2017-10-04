@@ -184,7 +184,7 @@
 				$("#aqua-admin-image-btn").attr("btn-type","update").text("Atualizar Imagem");
 				img_data = {
 					url: $(self).find(".aqua-image-display img").attr("src"),
-					link: $(self).find(".aqua-image-display img").attr("aqua-img-link")
+					link: $(self).find(".aqua-image-display img").attr("link-url")
 				};
 			}
 			return img_data;
